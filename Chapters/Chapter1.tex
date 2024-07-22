@@ -1,9 +1,11 @@
+
 % Chapter 1
 
 \chapter{Introducción general} % Main chapter title
 
 \label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 \label{IntroGeneral}
+
 
 %----------------------------------------------------------------------------------------
 
@@ -20,277 +22,101 @@
 %\section{Introducción}
 
 %----------------------------------------------------------------------------------------
-\section{Aprendiendo \LaTeX{}}
+\section{Contexto y motivación}
 
-\LaTeX{} no es \textsc{WYSIWYG} (What You See is What You Get), a diferencia de los procesadores de texto como Microsoft Word o Pages de Apple o incluso LibreOffice en el mundo open-source. En lugar de ello, un documento escrito para \LaTeX{} es en realidad un archivo de texto simple o llano que \emph{no contiene formato} . Nosotros le decimos a \LaTeX{} cómo deseamos que se aplique el formato en el documento final escribiendo comandos simples entre el texto, por ejemplo, si quiero usar texto en itálicas para dar énfasis, escribo \verb|\it{texto}| y pongo el texto que quiero en itálicas entre medio de las llaves. Esto significa que \LaTeX{} es un lenguaje del tipo \enquote{mark-up}, muy parecido a HTML.
+En las últimas décadas, la creciente demanda de energía ha generado preocupaciones significativas a nivel mundial. Este incremento en el consumo energético, impulsado por el crecimiento poblacional, la industrialización y la expansión de tecnologías dependientes de la electricidad, ha llevado a una mayor explotación de recursos naturales y un aumento de las emisiones de gases de efecto invernadero, como se observa en la Figura \ref{fig:emisionesco2}. Estos factores han contribuido al cambio climático, provocando impactos ambientales que van desde el calentamiento global hasta la pérdida de biodiversidad y eventos climáticos extremos.
 
-\subsection{Una introducción (no tan corta) a \LaTeX{}}
-
-Si sos nuevo en \LaTeX{}, hay un muy buen libro electrónico - disponible gratuitamente en Internet como un archivo PDF - llamado, \enquote{A (not so short) Introduction to \LaTeX{}}. El título del libro es generalmente acortado a simplemente \emph{lshort}. Puede descargar la versión más reciente en inglés (ya que se actualiza de vez en cuando) desde aquí:
-\url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}
-
-Se puede encontrar la versión en español en la lista en esta página: \url{http://www.ctan.org/tex-archive/info/lshort/}
-
-\subsubsection{Una subsubsección}
-
-Acá tiene un ejemplo de una ``subsubsección'' que es el cuarto nivel de ordenamiento del texto, después de capítulo, sección y subsección.  Como se puede ver, las subsubsecciones no van numeradas en el cuerpo del documento ni en el índice.  El formato está definido por la plantilla y no debe ser modificado.
-
-\subsection{Guía matemática rápida para \LaTeX{}}
-
-Si estás escribiendo un documento con mucho contenido matemático, entonces es posible que desees leer el documento de la AMS (American Mathematical Society) llamado, \enquote{A Short Math Guide for \LaTeX{}}. Se puede encontrar en línea en el siguiente link: \url{http://www.ams.org/tex/amslatex.html} en la sección \enquote{Additional Documentation} hacia la parte inferior de la página.
-
-
-%----------------------------------------------------------------------------------------
-
-\section{Utilizando esta plantilla}
-
-Si estás familiarizado con \LaTeX{}, entonces podés explorar la estructura de directorios de esta plantilla y proceder a personalizarla agregando tu información en el bloque \emph{INFORMACIÓN DE LA PORTADA} en el archivo \file{memoria.tex}.  
-
-Se puede continuar luego modificando el resto de los archivos siguiendo los lineamientos que se describen en la sección \ref{sec:FillingFile} en la página \pageref{sec:FillingFile}.
-
-Debés asegurarte de leer el capítulo \ref{Chapter2} acerca de las convenciones utilizadas para las Memoria de los Trabajos Finales de la \degreename.
-
-Si sos nuevo en \LaTeX{}, se recomienda que continúes leyendo el documento ya que contiene información básica para aprovechar el potencial de esta herramienta.
-
-
-%----------------------------------------------------------------------------------------
-
-\section{Qué incluye esta plantilla}
-
-\subsection{Carpetas}
-
-Esta plantilla se distribuye como una único archivo .zip que se puede descomprimir en varios archivos y carpetas. Asimismo, se puede consultar el repositorio git para obtener la última versión de los archivos, \url{https://github.com/patriciobos/Plantilla-CESE.git}. Los nombres de las carpetas son, o pretender ser, auto-explicativos.
-
-\keyword{Appendices} -- Esta es la carpeta donde se deben poner los apéndices. Cada apéndice debe ir en su propio archivo \file{.tex}. Se incluye un ejemplo y una plantilla en la carpeta.
-
-\keyword{Chapters} -- Esta es la carpeta donde se deben poner los capítulos de la memoria. Cada capítulo debe ir un su propio archivo \file{.tex} por separado.  Se ofrece por defecto, la siguiente estructura de capítulos y se recomienda su utilización dentro de lo posible:
-
-\begin{itemize}
-\item Capítulo 1: Introducción general	
-\item Capítulo 2: Introducción específica
-\item Capítulo 3: Diseño e implementación
-\item Capítulo 4: Ensayos y resultados
-\item Capítulo 5: Conclusiones
-
-\end{itemize}
-
-Esta estructura de capítulos es la que se recomienda para las memorias de la especialización.
-
-\keyword{Figures} -- Esta carpeta contiene todas las figuras de la memoria.  Estas son las versiones finales de las imágenes que van a ser incluidas en la memoria.  Pueden ser imágenes en formato \textit{raster}\footnote{\url{https://en.wikipedia.org/wiki/Raster_graphics}} como \file{.png}, \file{.jpg} o en formato vectoriales\footnote{\url{https://en.wikipedia.org/wiki/Vector_graphics}} como \file{.pdf}, \file{.ps}.  Se debe notar que utilizar imágenes vectoriales disminuye notablemente el peso del documento final y acelera el tiempo de compilación por lo que es recomendable su utilización siempre que sea posible.
-
-\subsection{Archivos}
-
-También están incluidos varios archivos, la mayoría de ellos son de texto plano y se puede ver su contenido en un editor de texto. Después de la compilación inicial, se verá que más archivos auxiliares son creados por \ LaTeX{} o BibTeX, pero son de uso interno y no es necesario hacer nada en particular con ellos.  Toda la información necesaria para compilar el documento se encuentra en los archivos \file{.tex}, \file{.bib}, \file{.cls} y en las imágenes de la carpeta Figures.
-
-\keyword{referencias.bib} - este es un archivo importante que contiene toda la información de referencias bibliográficas que se utilizarán para las citas en la memoria en conjunto con BibTeX. Usted puede escribir las entradas bibliográficas en forma manual, aunque existen también programas de gestión de referencias que facilitan la creación y gestión de las referencias y permiten exportarlas en formato BibTeX.  También hay disponibles sitios web como \url{books.google.com} que permiten obtener toda la información necesaria para una cita en formato BibTeX. Ver sección \ref{sec:biblio}
-
-\keyword{MastersDoctoralThesis.cls} -- este es un archivo importante. Es el archivos con la clase que le informa a \LaTeX{} cómo debe dar formato a la memoria. El usuario de la plantilla no debería necesitar modificar nada de este archivo.
-
-\keyword{memoria.pdf} -- esta es su memoria con una tipografía bellamente compuesta (en formato de archivo PDF) creado por \LaTeX{}. Se distribuye con la plantilla y después de compilar por primera vez sin hacer ningún cambio se debería obtener una versión idéntica a este documento.
-
-\keyword{memoria.tex} -- este es un archivo importante. Este es el archivo que tiene que compilar \LaTeX{} para producir la memoria como un archivo PDF. Contiene un marco de trabajo y estructuras que le indican a \LaTeX{} cómo diagramar la memoria.  Está altamente comentado para que se pueda entender qué es lo que realiza cada línea de código y por qué está incluida en ese lugar.  En este archivo se debe completar la información personalizada de las primeras sección según se indica en la sección \ref{sec:FillingFile}.
-
-Archivos que \emph{no} forman parte de la distribución de la plantilla pero que son generados por \LaTeX{} como archivos auxiliares necesarios para la producción de la memoria.pdf son:
-
-\keyword{memoria.aux} -- este es un archivo auxiliar generado por \LaTeX{}, si se borra \LaTeX{} simplemente lo regenera cuando se compila el archivo principal \file{memoria.tex}.
-
-\keyword{memoria.bbl} -- este es un archivo auxiliar generado por BibTeX, si se borra BibTeX simplemente lo regenera cuando se compila el archivo principal \file{memoria.tex}. Mientras que el archivo \file{.bib} contiene todas las referencias que hay, este archivo \file{.bbl} contine sólo las referencias que han sido citadas y se utiliza para la construcción de la bibiografía.
-
-\keyword{memoria.blg} -- este es un archivo auxiliar generado por BibTeX, si se borra BibTeX simplemente lo regenera cuando se compila el archivo principal \file{memoria.tex}.
-
-\keyword{memoria.lof} -- este es un archivo auxiliar generado por \LaTeX{}, si se borra \LaTeX{} simplemente lo regenera cuando se compila el archivo principal \file{memoria.tex}.  Le indica a \LaTeX{} cómo construir la sección \emph{Lista de Figuras}.
- 
-\keyword{memoria.log} --  este es un archivo auxiliar generado por \LaTeX{}, si se borra \LaTeX{} simplemente lo regenera cuando se compila el archivo principal \file{memoria.tex}. Contiene mensajes de \LaTeX{}. Si se reciben errores o advertencias durante la compilación, se guardan en este archivo \file{.log}.
-
-\keyword{memoria.lot} -- este es un archivo auxiliar generado por \LaTeX{}, si se borra \LaTeX{} simplemente lo regenera cuando se compila el archivo principal \file{memoria.tex}.  Le indica a \LaTeX{} cómo construir la sección \emph{Lista de Tablas}.
-
-\keyword{memoria.out} -- este es un archivo auxiliar generado por \LaTeX{}, si se borra \LaTeX{} simplemente lo regenera cuando se compila el archivo principal \file{memoria.tex}.
-
-De esta larga lista de archivos, sólo aquellos con la extensión \file{.bib}, \file{.cls} y \file{.tex} son importantes.  Los otros archivos auxiliares pueden ser ignorados o borrados ya que \LaTeX{} y BibTeX los regenerarán durante la compilación.
-
-%----------------------------------------------------------------------------------------
-
-\section{Entorno de trabajo}
-
-Ante de comenzar a editar la plantilla debemos tener un editor \LaTeX{} instalado en nuestra computadora.  En forma análoga a lo que sucede en lenguaje C, que se puede crear y editar código con casi cualquier editor, existen ciertos entornos de trabajo que nos pueden simplificar mucho la tarea.  En este sentido, se recomienda, sobre todo para los principiantes en \LaTeX{} la utilización de TexMaker, un programa gratuito y multi-plantaforma que está disponible tanto para windows como para sistemas GNU/linux.
-
-La versión más reciente de TexMaker es la 4.5 y se puede descargar del siguiente link: \url{http://www.xm1math.net/texmaker/download.html}. Se puede consultar el manual de usuario en el siguiente link: \url{http://www.xm1math.net/texmaker/doc.html}.
- 
-
-\subsection{Paquetes adicionales}
-
-Si bien durante el proceso de instalación de TexMaker, o cualquier otro editor que se haya elegido, se instalarán en el sistema los paquetes básicos necesarios para trabajar con \LaTeX{}, la plantilla de los trabajos de Especialización y Maestría requieren de paquete adicionales.
-
-Se indican a continuación los comandos que se deben introducir en la consola de Ubuntu (ctrl + alt + t) para instalarlos:
-
-\begin{lstlisting}[language=bash]
-  $ sudo apt install texlive-lang-spanish texlive-science 
-  $ sudo apt install texlive-bibtex-extra biber
-  $ sudo apt install texlive texlive-fonts-recommended
-  $ sudo apt install texlive-latex-extra
-\end{lstlisting}
-
-
-\subsection{Configurando TexMaker}
-\label{subsec:configurando}
-
-
-
-Una vez instalado el programa y los paquetes adicionales se debe abrir el archivo memoria.tex con el editor para ver una pantalla similar a la que se puede apreciar en la figura \ref{fig:texmaker}. 
-Una vez instalado el programa y los paquetes adicionales se debe abrir el archivo memoria.tex con el editor para ver una pantalla similar a la que se puede apreciar en la figura \ref{fig:texmaker}. 
-Una vez instalado el programa y los paquetes adicionales se debe abrir el archivo memoria.tex con el editor para ver una pantalla similar a la que se puede apreciar en la figura \ref{fig:texmaker}. 
-Una vez instalado el programa y los paquetes adicionales se debe abrir el archivo memoria.tex con el editor para ver una pantalla similar a la que se puede apreciar en la figura \ref{fig:texmaker}. 
-
-\vspace{1cm}
-
-\begin{figure}[htbp]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=.5\textwidth]{./Figures/texmaker.png}
-	\caption{Entorno de trabajo de texMaker.}
-	\label{fig:texmaker}
+	\includegraphics[width=1\textwidth]{./Figures/co2-emissions-by-electricity-generation.png}
+	\caption[Emisiones de $CO_2$ por la generación de electricidad.]{Emisiones de $CO_2$ por la generación de electricidad y calor por fuente de energía, Mundo\footnotemark.}
+	\label{fig:emisionesco2}
+	
 \end{figure}
 
-\vspace{1cm}
+\footnotetext{IEA (2023), Greenhouse Gas Emissions from Energy Data Explorer, IEA, Paris \url{https://www.iea.org/data-and-statistics/data-tools/greenhouse-gas-emissions-from-energy-data-explorer}}
 
-Notar que existe una vista llamada Estructura a la izquierda de la interfaz que nos permite abrir desde dentro del programa los archivos individuales de los capítulos.  A la derecha se encuentra una vista con el archivo propiamente dicho para su edición. Hacia la parte inferior se encuentra una vista del log con información de los resultados de la compilación.  En esta última vista pueden aparecen advertencias o \textit{warning}, que normalmente pueden ser ignorados, y los errores que se indican en color rojo y deben resolverse para que se genere el PDF de salida.
 
-Recordar que el archivo que se debe compilar con PDFLaTeX es \file{memoria.tex}, si se tratara de compilar alguno de los capítulos saldría un error.  Para salvar la molestia de tener que cambiar de archivo para compilar cada vez que se realice una modificación en un capítulo, se puede definir el archivo \file{memoria.tex} como ``documento maestro'' yendo al menú opciones -> ``definir documento actual como documento maestro'', lo que permite compilar con PDFLaTeX memoria.tex directamente desde cualquier archivo que se esté modificando . Se muestra esta opción en la figura \ref{fig:docMaestro}.
+Según un informe de la \textit{International Energy Agency} (IEA), y como se observa en la Figura \ref{fig:demandaElectricidad}, se espera que el crecimiento de la demanda global de electricidad aumente del 2,6 \% en 2023 a un promedio del 3,2 \% en 2024-2025\footnote{IEA (2023), Year-on-year change in electricity demand by region, 2019-2025, IEA, Paris \url{https://www.iea.org/data-and-statistics/charts/year-on-year-change-in-electricity-demand-by-region-2019-2025}, Licence: CC BY 4.0}. El estudio también destaca que para 2025, la demanda aumentará en 2500 TWh con respecto a los niveles de 2022, lo que significa que en los próximos tres años, el aumento anual del consumo de electricidad será aproximadamente equivalente a la suma del consumo de Reino Unido y Alemania juntos.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=\textwidth]{./Figures/docMaestro.png}
-	\caption{Definir memoria.tex como documento maestro.}
-	\label{fig:docMaestro}
+	\includegraphics[width=.6\textwidth]{./Figures/year-on-year-change-in-electricity-demand-by-region-2019-2025.png}
+	\caption{Cambio anual en la demanda de electricidiad por región para el período 2019-2025.}
+	\label{fig:demandaElectricidad}
 \end{figure}
 
-En el menú herramientas se encuentran las opciones de compilación.  Para producir un archivo PDF a partir de un archivo .tex se debe ejecutar PDFLaTeX (el shortcut es F6). Para incorporar nueva bibliografía se debe utilizar la opción BibTeX del mismo menú herramientas (el shortcut es F11).
 
-Notar que para actualizar las tablas de contenidos se debe ejecutar PDFLaTeX dos veces.  Esto se debe a que es necesario actualizar algunos archivos auxiliares antes de obtener el resultado final.  En forma similar, para actualizar las referencias bibliográficas se debe ejecutar primero PDFLaTeX, después BibTeX y finalmente PDFLaTeX dos veces por idénticos motivos.
+Al mismo tiempo, el costo de la electricidad también ha experimentado un incremento significativo en los últimos años, impulsado por diversos factores como la creciente demanda, el aumento de precios de los combustibles utilizados para su generación y factores geopolíticos. Este aumento impacta directamente en el presupuesto de los hogares y en la competitividad de las industrias y la economía en general.
 
-\section{Personalizando la plantilla, el archivo \file{memoria.tex}}
-\label{sec:FillingFile}
+En este contexto, la eficiencia energética se ha convertido en una prioridad global. Gobiernos, organizaciones y consumidores buscan métodos para optimizar el uso de la energía y reducir su huella de carbono. Uno de los sectores donde esta optimización es crucial es el consumo eléctrico domiciliario. Los hogares representan una parte significativa del consumo energético total y, a menudo, carecen de herramientas eficaces para monitorear y gestionar su uso de electricidad. Esta falta de visibilidad y control sobre el consumo diario impide a los usuarios adoptar hábitos más sostenibles y económicos.
 
-Para personalizar la plantilla se debe incorporar la información propia en los distintos archivos \file{.tex}. 
+\newpage
+\section{Sistema de monitoreo de consumo eléctrico}
+Tener información es crucial para la toma de decisiones ya que mejora la calidad de las mismas al basarlas en hechos y datos concretos. Permite identificar oportunidades y riesgos, reduce incertidumbres, facilita la planificación estratégica y el uso eficiente de los recursos.
 
-Primero abrir \file{memoria.tex} con TexMaker (o el editor de su preferencia). Se debe ubicar dentro del archivo el bloque de código titulado \emph{INFORMACIÓN DE LA PORTADA} donde se deben incorporar los primeros datos personales con los que se construirá automáticamente la portada.
+En el contexto anteriormente planteado, contar con información en tiempo real relacionada al consumo de energía eléctrica permitiría, por ejemplo, identificar cuáles son los electrodomésticos y hábitos que más energía consumen o tomar decisiones informadas al reemplazar o adquirir nuevos dispositivos. Disponer de información adecuada puede ayudar a los hogares a enfocar los esfuerzos de ahorro energético, disminuir sus costos asociados y contribuir a la sostenibilidad ambiental.
 
+Es por esto que, a través de la aplicación de nuevas tecnologías y técnicas, se busca generar una herramienta innovadora, accesible y eficaz que suministre información en tiempo real sobre el consumo de electricidad de los usuarios. El objetivo primario este sistema de monitoreo de consumo eléctrico es que, a partir de los datos recolectados, los usuarios puedan tomar decisiones informadas tendientes a hacer un uso más eficiente y consciente de la energía.
 
-%----------------------------------------------------------------------------------------
+\newpage
+\section{Objetivos y alcance}
 
-\section{El código del archivo \file{memoria.tex} explicado}
-
-El archivo \file{memoria.tex} contiene la estructura del documento y es el archivo de mayor jerarquía de la memoria.  Podría ser equiparable a la función \emph{main()} de un programa en C, o mejor dicho al archivo fuente .c donde se encuentra definida la función main().
-
-La estructura básica de cualquier documento de \LaTeX{} comienza con la definición de clase del documento, es seguida por un preámbulo donde se pueden agregar funcionalidades con el uso de \texttt{paquetes} (equiparables a bibliotecas de C), y finalmente, termina con el cuerpo del documento, donde irá el contenido de la memoria.
-
-\lstset{%
-  basicstyle=\small\ttfamily,
-  language=[LaTeX]{TeX}
-}
-
-\begin{lstlisting}
-\documentclass{article}  <- Definicion de clase
-\usepackage{listings}	 <- Preambulo
-
-\begin{document}	 <- Comienzo del contenido propio 
-	Hello world!
-\end{document}
-\end{lstlisting}
-
-
-El archivo \file{memoria.tex} se encuentra densamente comentado para explicar qué páginas, secciones y elementos de formato está creando el código \LaTeX{} en cada línea. El código está dividido en bloques con nombres en mayúsculas para que resulte evidente qué es lo que hace esa porción de código en particular. Inicialmente puede parecer que hay mucho código \LaTeX{}, pero es principalmente código para dar formato a la memoria por lo que no requiere intervención del usuario de la plantilla.  Sí se deben personalizar con su información los bloques indicados como:
+\subsection{Objetivos}
+El principal objetivo del proyecto es el diseño e implementación de un prototipo de un producto que permita, principalmente a usuarios domiciliarios, tener información sobre su consumo de electricidad para poder tomar decisiones inteligentes que apunten a reducir el uso de energía. El objetivo subyacente es asistir a los usuarios en la reducción de costos y generar un impacto positivo en el ambiente. Este objetivo macro se desglosa en varios objetivos específicos:
 
 \begin{itemize}
-	\item Informacion de la memoria
-	\item Resumen
-	\item Agradecimientos
-	\item Dedicatoria
+	\item Medir variables eléctricas esenciales como voltaje, corriente, potencia, frecuencia y factor de potencia.
+	
+	\item Asegurar que el dispositivo transmita los datos de manera confiable a un servidor en la nube para su procesamiento, almacenamiento y posterior consumo.
+
+	\item  Proveer al usuario una interfaz intuitiva que le permita acceder a sus datos de consumo eléctrico de manera clara y comprensible.
+
+	\item Ofrecer herramientas analíticas para identificar patrones de consumo y sugerir acciones para mejorar la eficiencia energética. 
+	
+	\item Fomentar el uso responsable de la energía mediante recomendaciones basadas en datos precisos.
+	
+	\item Educar a los usuarios sobre su consumo energético y las maneras de optimizarlo, contribuyendo a la reducción de costos y del impacto ambiental.
+	
+	\item Asegurar que el sistema sea escalable para adaptarse a diferentes volúmenes de datos y a un número creciente de usuarios.
+	
+	\item Mantener la accesibilidad y facilidad de uso del sistema, garantizando que usuarios sin conocimientos técnicos avanzados puedan beneficiarse de la herramienta.
 \end{itemize}
 
-El índice de contenidos, las listas de figura de tablas se generan en forma automática y no requieren intervención ni edición manual por parte del usuario de la plantilla. 
+\subsection{Alcance}
 
-En la parte final del documento se encuentran los capítulos y los apéndices.  Por defecto se incluyen los 5 capítulos propuestos que se encuentran en la carpeta /Chapters. Cada capítulo se debe escribir en un archivo .tex separado y se debe poner en la carpeta \emph{Chapters} con el nombre \file{Chapter1}, \file{Chapter2}, etc\ldots El código para incluir capítulos desde archivos externos se muestra a continuación.
+El alcance del proyecto abarca desde el diseño inicial hasta la implementación y despliegue de un sistema de monitoreo. Este sistema incluye varios componentes clave y fases de desarrollo:
 
-\begin{verbatim}
-	\include{Chapters/Chapter1}
-	\include{Chapters/Chapter2} 
-	\include{Chapters/Chapter3}
-	\include{Chapters/Chapter4} 
-	\include{Chapters/Chapter5} 
-\end{verbatim}
-
-Los apéndices también deben escribirse en archivos .tex separados, que se deben ubicar dentro de la carpeta \emph{Appendices}. Los apéndices vienen comentados por defecto con el caracter \code{\%} y para incluirlos simplemente se debe eliminar dicho caracter.
-
-Finalmente, se encuentra el código para incluir la bibliografía en el documento final.  Este código tampoco debe modificarse. La metodología para trabajar las referencias bibliográficas se desarrolla en la sección \ref{sec:biblio}.
-%----------------------------------------------------------------------------------------
-
-\section{Bibliografía}
-\label{sec:biblio}
-
-Las opciones de formato de la bibliografía se controlan a través del paquete de latex \option{biblatex} que se incluye en la memoria en el archivo memoria.tex.  Estas opciones determinan cómo se generan las citas bibliográficas en el cuerpo del documento y cómo se genera la bibliografía al final de la memoria.
-
-En el preámbulo se puede encontrar el código que incluye el paquete biblatex, que no requiere ninguna modificación del usuario de la plantilla, y que contiene las siguientes opciones:
-
-\begin{lstlisting}
-\usepackage[backend=bibtex,
-	natbib=true, 
-	style=numeric, 
-	sorting=none]
-{biblatex}
-\end{lstlisting}
-
-En el archivo \file{reference.bib} se encuentran las referencias bibliográficas que se pueden citar en el documento.  Para incorporar una nueva cita al documento lo primero es agregarla en este archivo con todos los campos necesario.  Todas las entradas bibliográficas comienzan con $@$ y una palabra que define el formato de la entrada.  Para cada formato existen campos obligatorios que deben completarse. No importa el orden en que las entradas estén definidas en el archivo .bib.  Tampoco es importante el orden en que estén definidos los campos de una entrada bibliográfica. A continuación se muestran algunos ejemplos:
-
-\begin{lstlisting}
-@ARTICLE{ARTICLE:1,
-    AUTHOR="John Doe",
-    TITLE="Title",
-    JOURNAL="Journal",
-    YEAR="2017",
-}
-\end{lstlisting}
+\begin{itemize}
+	\item Diseño y desarrollo del dispositivo de medición:
+		\begin{itemize}
+		\item selección de componentes de hardware y sensores adecuados para la medición de variables eléctricas.
+		\item programación del dispositivo para la captura precisa de datos y su transmisión mediante conexión Wi-Fi.
+		\end{itemize}
+	\item Implementación de un servidor:
+		\begin{itemize}
+		\item configuración de una base de datos relacional para el almacenamiento seguro y eficiente de grandes volúmenes de datos.
+		\item desarrollo de endpoints HTTP que permitan operaciones CRUD sobre los datos y la gestión de usuarios.
+		\item implementación de un broker MQTT.
+		\end{itemize}
+	\item Desarrollo de plataforma web:
+	\begin{itemize}
+		\item creación de una interfaz de usuario intuitiva utilizando frameworks modernos.
+		\item integración de funcionalidades analíticas y visualización de datos, facilitando la interpretación y el análisis del consumo eléctrico por parte de los usuarios.
+	\end{itemize}
+	\item Fase de pruebas y validación:
+	\begin{itemize}
+		\item realización de pruebas unitarias y de integración para asegurar la correcta interacción entre el dispositivo de medición, el servidor en la nube y la plataforma web.
+		\item validación del sistema en un entorno real para garantizar su funcionalidad y eficacia.
+	\end{itemize}
+	\item Despliegue y mantenimiento:
+	\begin{itemize}
+		\item implementación del sistema en un entorno operativo real, disponible para usuarios domésticos.
+	\end{itemize}
+\end{itemize} 
 
 
-\begin{lstlisting}
-@BOOK{BOOK:1,
-    AUTHOR="John Doe",
-    TITLE="The Book without Title",
-    PUBLISHER="Dummy Publisher",
-    YEAR="2100",
-}
-\end{lstlisting}
+\newpage
 
+\section{Estado del arte}
 
-\begin{lstlisting}
-@INBOOK{BOOK:2,
-    AUTHOR="John Doe",
-    TITLE="The Book without Title",
-    PUBLISHER="Dummy Publisher",
-    YEAR="2100",
-    PAGES="100-200",
-}
-\end{lstlisting}
-
-
-\begin{lstlisting}
-@MISC{WEBSITE:1,
-    HOWPUBLISHED = "\url{http://example.com}",
-    AUTHOR = "Intel",
-    TITLE = "Example Website",
-    MONTH = "12",
-    YEAR = "1988",
-    URLDATE = {2012-11-26}
-}
-\end{lstlisting}
-
-Se debe notar que los nombres \emph{ARTICLE:1}, \emph{BOOK:1}, \emph{BOOK:2} y \emph{WEBSITE:1} son nombres de fantasía que le sirve al autor del documento para identificar la entrada. En este sentido, se podrían reemplazar por cualquier otro nombre.  Tampoco es necesario poner : seguido de un número, en los ejemplos sólo se incluye como un posible estilo para identificar las entradas.
-
-La entradas se citan en el documento con el comando: 
-
-\begin{verbatim}
-\citep{nombre_de_la_entrada}
-\end{verbatim}
-
-Y cuando se usan, se muestran así: \citep{ARTICLE:1}, \citep{BOOK:1}, \citep{BOOK:2}, \citep{WEBSITE:1}.  Notar cómo se conforma la sección Bibliografía al final del documento.
-
-Finalmente y como se mencionó en la subsección \ref{subsec:configurando}, para actualizar las referencias bibliográficas tanto en la sección bibliografía como las citas en el cuerpo del documento, se deben ejecutar las herramientas de compilación PDFLaTeX, BibTeX, PDFLaTeX, PDFLaTeX, en ese orden.  Este procedimiento debería resolver cualquier mensaje "Citation xxxxx on page x undefined".
