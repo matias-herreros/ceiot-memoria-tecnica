@@ -41,7 +41,7 @@ En el ámbito de la energía, y dado el contexto actual, contar con datos de bue
 
 \footnotetext{IEA (2023), Greenhouse Gas Emissions from Energy Data Explorer, IEA, Paris \url{https://www.iea.org/data-and-statistics/data-tools/greenhouse-gas-emissions-from-energy-data-explorer}}
 
-Según un informe de la \textit{International Energy Agency} (IEA) \footnote{IEA (2023), Electricity Market Report 2023, IEA, Paris \url{https://iea.blob.core.windows.net/assets/255e9cba-da84-4681-8c1f-458ca1a3d9ca/ElectricityMarketReport2023.pdf}}, y como se observa en la figura \ref{fig:demandaElectricidad}, se espera que el crecimiento de la demanda global de electricidad aumente del 2,6 \% en 2023 a un promedio del 3,2 \% en 2024-2025. El estudio también destaca que para 2025, la demanda aumentará en 2500 TWh con respecto a los niveles de 2022, lo que significa que en los próximos tres años, el aumento anual del consumo de electricidad será aproximadamente equivalente a la suma del consumo de Reino Unido y Alemania juntos.
+Según un informe de la \textit{International Energy Agency} (IEA) \cite{ieareport}, y como se observa en la figura \ref{fig:demandaElectricidad}, se espera que el crecimiento de la demanda global de electricidad aumente del 2,6 \% en 2023 a un promedio del 3,2 \% en 2024-2025. El estudio también destaca que para 2025, la demanda aumentará en 2500 TWh con respecto a los niveles de 2022, lo que significa que en los próximos tres años, el aumento anual del consumo de electricidad será aproximadamente equivalente a la suma del consumo de Reino Unido y Alemania juntos.
 
 \newpage
 
@@ -64,9 +64,8 @@ Para lograr una mayor eficiencia es vital poder contar con información en tiemp
 
 \newpage
 \section{Motivación}
-La motivación del trabajo surge de la necesidad de abordar los desafíos previamente planteados relacionados con el consumo energético, la sostenibilidad ambiental y la economía doméstica. El sistema busca generar datos y proveer información para lograr una reducción de consumo eléctrico a partir de la adopción de prácticas más eficientes. Esta disminución u eficientización del consumo es clave ya que sirve para reducir el impacto ambiental relacionado con la generación y consumo de energía y para reducir costos.
+La motivación del trabajo surge de la necesidad de abordar los desafíos previamente planteados relacionados con el consumo energético, la sostenibilidad ambiental y la economía doméstica. El sistema busca generar datos y proveer información para lograr una reducción de consumo eléctrico a partir de la adopción de prácticas más eficientes. Esta disminución y eficientización del consumo es clave ya que sirve para reducir el impacto ambiental relacionado con la generación y consumo de energía y para reducir costos.
 
-\newpage
 \section{Objetivos y alcance}
 
 \subsection{Objetivos}
@@ -83,42 +82,42 @@ El principal objetivo del trabajo es el diseño e implementación de un prototip
 	
 	\item Fomentar el uso responsable de la energía mediante recomendaciones basadas en datos precisos.
 	
-	\item Educar a los usuarios sobre su consumo energético y las maneras de optimizarlo, contribuyendo a la reducción de costos y del impacto ambiental.
+	\item Educar a los usuarios sobre su consumo energético y las maneras de optimizarlo, para contribuir a la reducción de costos y del impacto ambiental.
 	
 	\item Asegurar que el sistema sea escalable para adaptarse a diferentes volúmenes de datos y a un número creciente de usuarios.
 	
-	\item Mantener la accesibilidad y facilidad de uso del sistema, garantizando que usuarios sin conocimientos técnicos avanzados puedan beneficiarse de la herramienta.
+	\item Mantener la accesibilidad y facilidad de uso del sistema, para garantizar que usuarios sin conocimientos técnicos avanzados puedan beneficiarse de la herramienta.
 \end{itemize}
 
 \subsection{Alcance}
 
-El alcance del trabajo abarca desde el diseño inicial hasta la implementación y despliegue de un sistema de monitoreo. Este sistema incluye varios componentes clave y fases de desarrollo:
+El alcance del trabajo abarca desde el diseño inicial hasta la implementación y despliegue de un sistema de monitoreo. Este sistema incluye varios componentes y fases clave de desarrollo:
 
 \begin{itemize}
 	\item Diseño y desarrollo del dispositivo de medición:
 		\begin{itemize}
-		\item selección de componentes de hardware y sensores adecuados para la medición de variables eléctricas.
-		\item programación del dispositivo para la captura precisa de datos y su transmisión mediante conexión Wi-Fi.
+		\item Selección de componentes de hardware y sensores adecuados para la medición de variables eléctricas.
+		\item Programación del dispositivo para la captura precisa de datos y su transmisión mediante conexión Wi-Fi.
 		\end{itemize}
 	\item Implementación de un servidor:
 		\begin{itemize}
-		\item configuración de una base de datos relacional para el almacenamiento seguro y eficiente de grandes volúmenes de datos.
-		\item desarrollo de endpoints HTTP que permitan operaciones CRUD\footnote{Del inglés \textit{Create, Read, Update, Delete}. Es un acrónimo que se refiere a operaciones de creación, lectura, actualización y borrado de datos.} sobre los datos y la gestión de usuarios.
-		\item implementación de un broker MQTT.
+		\item Configuración de una base de datos relacional para el almacenamiento seguro y eficiente de grandes volúmenes de datos.
+		\item Desarrollo de endpoints HTTP que permitan operaciones CRUD \cite{crud} sobre los datos y la gestión de usuarios.
+		\item Implementación de un broker MQTT.
 		\end{itemize}
-	\item Desarrollo de plataforma web:
+	\item Desarrollo de la plataforma web:
 	\begin{itemize}
-		\item creación de una interfaz de usuario intuitiva utilizando frameworks modernos.
-		\item integración de funcionalidades analíticas y visualización de datos, facilitando la interpretación y el análisis del consumo eléctrico por parte de los usuarios.
+		\item Creación de una interfaz de usuario intuitiva utilizando frameworks modernos.
+		\item Integración de funcionalidades analíticas y visualización de datos, que faciliten la interpretación y el análisis del consumo eléctrico por parte de los usuarios.
 	\end{itemize}
 	\item Fase de pruebas y validación:
 	\begin{itemize}
-		\item realización de pruebas unitarias y de integración para asegurar la correcta interacción entre el dispositivo de medición, el servidor en la nube y la plataforma web.
-		\item validación del sistema en un entorno real para garantizar su funcionalidad y eficacia.
+		\item Realización de pruebas unitarias y de integración para asegurar la correcta interacción entre el dispositivo de medición, el servidor en la nube y la plataforma web.
+		\item Validación del sistema en un entorno real para garantizar su funcionalidad y eficacia.
 	\end{itemize}
 	\item Despliegue y mantenimiento:
 	\begin{itemize}
-		\item implementación del sistema en un entorno operativo real, disponible para usuarios domésticos.
+		\item Implementación del sistema en un entorno operativo real, disponible para usuarios domésticos.
 	\end{itemize}
 \end{itemize} 
 
@@ -132,44 +131,44 @@ Existen diversas tecnologías y productos que permiten a los usuarios monitoriza
 A continuación, se presenta una comparativa de algunos de los productos más destacados en el mercado, evaluando sus capacidades, parámetros medidos, precios y especificaciones técnicas.
 
 \begin{itemize}
-    \item Sense Home Energy Monitor\footnote{Sense Home Energy Monitor \url{https://sense.com/homes/product/}}: 
-    Sense es una aplicación móvil que muestra cuánta energía están consumiendo el hogar y los dispositivos individuales en tiempo real. Ayuda a encontrar maneras de ahorrar dinero y reducir la huella de carbono, ofreciendo información personalizada y herramientas para rastrear los aparatos que mas energía consumen.
+    \item Sense Home Energy Monitor \cite{competencia1}: 
+    Sense es una aplicación móvil que muestra cuánta energía están consumiendo el hogar y los dispositivos individuales en tiempo real. Ayuda a encontrar maneras de ahorrar dinero y reducir la huella de carbono, ofreciendo información personalizada y herramientas para rastrear los aparatos que más energía consumen.
 
-    \item Emporia Vue\footnote{Emporia Vue \url{https://www.emporiaenergy.com/energy-monitors/}}:
-    El monitor de energía doméstica Emporia Vue permite monitorear el uso de energía en tiempo real e identificar cualquier consumo de energía innecesario, ayudando a ahorrar dinero. Es reconocido como el mejor monitor de energía doméstica del mercado y es líder en ventas en Amazon. Permite el monitoreo de hasta 16 circuitos individuales, con integración con asistentes de voz como Alexa para control y notificaciones.
+    \item Emporia Vue \cite{competencia2}:
+    el monitor de energía doméstica Emporia Vue permite monitorear el uso de energía en tiempo real e identificar cualquier consumo de energía innecesario, ayudando a ahorrar dinero. Es reconocido como el mejor monitor de energía doméstica del mercado y es líder en ventas en Amazon. Permite el monitoreo de hasta 16 circuitos individuales, con integración con asistentes de voz como Alexa para control y notificaciones.
 
-    \item Aeotec Home Energy Meter\footnote{Aeotec Home Energy Meter \url{https://aeotec.com/smart-sensors/}}:
-    Los sensores pertenecientes a la familia Aeotec Home Energy Meter son compatibles con las tecnologías Zigbee o Z-Wave, y proporcionan datos vitales para hacer que una red doméstica sea verdaderamente inteligente. Los sensores no solo recopilan y transfieren datos, sino que también permiten activar automatizaciones vinculadas. Los datos recopilados también se utilizan para advertir, informar y proteger la instalación eléctrica en el caso que se den condiciones inusuales.
+    \item Aeotec Home Energy Meter \cite{competencia3}:
+    los sensores pertenecientes a la familia Aeotec Home Energy Meter son compatibles con las tecnologías Zigbee o Z-Wave, y proporcionan datos vitales para hacer que una red doméstica sea verdaderamente inteligente. Los sensores no solo recopilan y transfieren datos, sino que también permiten activar automatizaciones vinculadas. Los datos recopilados también se utilizan para advertir, informar y proteger la instalación eléctrica en el caso que se den condiciones inusuales.
 
-    \item TED Pro Home\footnote{TED Pro Home \url{https://www.theenergydetective.com/product/ted-t1500-power-meter}}:
-    El T1500 es un medidor de potencia que mide con precisión el consumo de energía de los dispositivos. Tiene una funcionalidad que permite al usuario introducir el valor del kilowatt-hora (kWh) y, en base a esto, se estima el costo de la energía consumida por el electrodoméstico conectado. El T1500 también puede usarse para verificar la calidad de la energía al monitorear el tensión, la frecuencia y el factor de potencia entre otras variables. No posee forma de almacenamiento de datos históricos.
+    \item TED Pro Home \cite{competencia4}:
+    el T1500 es un medidor de potencia que mide con precisión el consumo de energía de los dispositivos. Tiene una funcionalidad que permite al usuario introducir el valor del kilowatt-hora (kWh) y, en base a esto, se estima el costo de la energía consumida por el electrodoméstico conectado. El T1500 también puede usarse para verificar la calidad de la energía al monitorear el tensión, la frecuencia y el factor de potencia entre otras variables. No posee forma de almacenamiento de datos históricos.
 
-    \item Efergy Elite 4.0\footnote{Efergy Elite 4.0 \url{https://efergy.com/elite-classic/?v=06fa567b72d7}}:
-    Este dispositivo permite ver cuánta electricidad se está usando en cualquier momento (costo y kW), ver datos promedio e históricos diarios, semanales o mensuales, configurar hasta 4 tarifas diferentes y múltiples monedas mundiales, y emitir alertas de audio frente a consumos de energía excesivos.
+    \item Efergy Elite 4.0 \cite{competencia5}:
+    este dispositivo permite ver cuánta electricidad se está usando en cualquier momento (costo y kW), ver datos promedio e históricos diarios, semanales o mensuales, configurar hasta 4 tarifas diferentes y múltiples monedas mundiales, y emitir alertas de audio frente a consumos de energía excesivos.
 \end{itemize}
 
 En la tabla \ref{tab:tablaComparativaProductos} se presenta en forma condensada la comparativa entre los distintos productos. Se consideran valores en dólares americanos (USD).
 
 \begin{table}[h]
 	\centering
-
+        \caption[Productos actuales en el mercado]{Tabla comparativa de los productos similares presentes en el mercado.}
 	\begin{tabular}{c c c c}    
 		\toprule
 		\textbf{Producto} 	 & \textbf{\makecell{Parámetros \\Medidos}} 		& \textbf{Precio} & \textbf{\makecell{Especificaciones \\Técnicas}}  \\
 		\midrule
-		\makecell{Sense Home \\Energy Monitor} & \makecell{V, A, W,\\ FP, Hz}   & \$ 300  & \makecell{Wi-Fi, detección de \\dispositivos, app móvil \\integrada, procesamiento edge}\\	
+		\makecell{Sense Home \\Energy Monitor} & \makecell{V, A, W,\\ FP, Hz}   & \$ 300  & \makecell{Wi-Fi, detección de \\dispositivos, app móvil \\integrada, procesamiento edge.}\\	
   
-		Emporia Vue	              & \makecell{V, A, W,\\ FP, Hz}   & \$ 100  & \makecell{Wi-Fi, 16 sensores de \\circuito, app móvil, \\integración con asistentes de voz}\\
+		Emporia Vue	              & \makecell{V, A, W,\\ FP, Hz}   & \$ 100  & \makecell{Wi-Fi, 16 sensores de \\circuito, app móvil, \\integración con asistentes de voz.}\\
   
-		\makecell{Aeotec Home \\Energy Meter}  & \makecell{V, A, W,\\ FP, Hz}   & \$ 130  & \makecell{Z-Wave, medición\\ de energía total y por fase}\\
+		\makecell{Aeotec Home \\Energy Meter}  & \makecell{V, A, W,\\ FP, Hz}   & \$ 130  & \makecell{Z-Wave, medición\\ de energía total y por fase.}\\
 
-            TED 1500                  & \makecell{V, A, W,\\ FP, Hz}   & \$ 50   &\makecell{Pantalla LCD, batería\\ de respaldo, aviso \\de sobre tensión}\\
+            TED 1500                  & \makecell{V, A, W,\\ FP, Hz}   & \$ 50   &\makecell{Pantalla LCD, batería\\ de respaldo, aviso \\de sobre tensión.}\\
             
-            Efergy Elite 4.0          & \makecell{V, A, W,\\ FP, Hz}   & \$ 49   &\makecell{RF, pantalla LCD, \\almacenamiento de datos \\de hasta 24 meses}\\
+            Efergy Elite 4.0          & \makecell{V, A, W,\\ FP, Hz}   & \$ 49   &\makecell{RF, pantalla LCD, \\almacenamiento de datos \\de hasta 24 meses.}\\
 		\bottomrule
 		\hline
 	\end{tabular}
- 	\caption[Productos actuales en el mercado]{Tabla comparativa de los productos similares presentes en el mercado.}
+ 	
 	\label{tab:tablaComparativaProductos}
 \end{table}
 
